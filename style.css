@@ -1,0 +1,22 @@
+.container A{padding:2px;display:inline-block;text-decoration:none;color:black;border-bottom:1px #ccc solid;}
+.container A:HOVER{background:#fafafa;}
+
+
+H2{text-align:center;}
+
+.carousel-caption{background:black;border:1px white solid;}
+
+.header{text-decoration:none;display:block;background:#db6058;padding:15px;margin-bottom:40px;}
+.header .nickname{font-size:60px;color:white;}
+
+.col_content{width:700px;max-width:100%;margin:auto;}
+
+@media screen and (min-width: 800px) {
+    BODY{padding-bottom:160px}
+}
+
+
+@media screen and (max-width: 800px) {
+    .header {text-align:center;}
+    .header .nickname{font-size:40px;}
+}
