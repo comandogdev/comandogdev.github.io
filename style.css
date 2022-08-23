@@ -11,6 +11,8 @@ H2{text-align:center;}
 
 .col_content{width:700px;max-width:100%;margin:auto;}
 
+A.no_border{border:0;background:none;}
+
 @media screen and (min-width: 800px) {
     BODY{padding-bottom:160px}
 }
