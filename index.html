@@ -23,7 +23,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-4 item">
         <div class="card mb-4 shadow-sm">
-            <a href="#" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions">
+            <a href="https://comandogdev.itch.io/super-champions" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions">
             <img src="images/superchampions.gif" class="bd-placeholder-img card-img-top" width="100%" style="min-height:225px;background:#fafafa;">
             </a>
         </div>
@@ -208,12 +208,13 @@
 <script>    
 
 $('.card_link').click(function(){
+    $('#exampleModalLabel').html( $(this).data('title') );
+    
     $.ajax({
       method: 'GET',
       url: '/' + $(this).data('file') + '.html',
       dataType: 'html'
     }).done(function(data) {
-      $('#exampleModalLabel').html( $(this).data('title') );
       $('#modal .modal-body').html(data);
       $('#modal').modal('show'); 
     });
