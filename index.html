@@ -23,7 +23,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-4 item">
         <div class="card mb-4 shadow-sm">
-            <a href="https://comandogdev.itch.io/super-champions" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions" data-devlog="https://twitter.com/comandogdev/status/1502917882493251586">
+            <a href="https://comandogdev.itch.io/super-champions" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions" data-devlog="https://twitter.com/comandogdev/status/1502917882493251586" data-video="https://www.youtube.com/watch?v=rZYrXTxPKd4">
             <img src="images/superchampions.gif" class="bd-placeholder-img card-img-top" width="100%" style="min-height:225px;background:#fafafa;">
             </a>
         </div>
@@ -197,6 +197,7 @@
         ...
       </div>
       <div class="modal-footer">
+        <a href="#" target="_blank" class="btn btn-secondary" id="btn_video">Vídeo</a>
         <a href="#" target="_blank" class="btn btn-secondary" id="btn_devlog">Devlog</a>
         <a href="#" target="_blank" class="btn btn-success" id="btn_download">Download</a>
       </div>
@@ -216,6 +217,13 @@ $('.card_link').click(function(){
         $('#btn_devlog').attr('href', devlog_url).show();
     }else{
         $('#btn_devlog').hide();
+    }
+ 
+    var video_url = $(this).data('video');
+    if( video_url ){
+        $('#btn_video').attr('href', video_url).show();
+    }else{
+        $('#btn_video').hide();
     }
     
     $.ajax({
