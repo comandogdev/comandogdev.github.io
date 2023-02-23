@@ -197,8 +197,8 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="btn_devlog">Devlog</button>
-        <button type="button" class="btn btn-success" id="btn_download">Download</button>
+        <a href="#" target="_blank" class="btn btn-secondary" id="btn_devlog">Devlog</a>
+        <a href="#" target="_blank" class="btn btn-success" id="btn_download">Download</a>
       </div>
     </div>
   </div>
@@ -209,11 +209,11 @@
 
 $('.card_link').click(function(){
     $('#exampleModalLabel').html( $(this).data('title') );
-    $('#btn_download').html( $(this).attr('href') );
+    $('#btn_download').attr('href', $(this).attr('href') );
     
     var devlog_url = $(this).data('devlog');
     if( devlog_url ){
-        $('#btn_devlog').html( devlog_url ).show();
+        $('#btn_devlog').attr('href', devlog_url).show();
     }else{
         $('#btn_devlog').hide();
     }
