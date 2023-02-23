@@ -23,7 +23,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-4 item">
         <div class="card mb-4 shadow-sm">
-            <a href="https://comandogdev.itch.io/super-champions" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions">
+            <a href="https://comandogdev.itch.io/super-champions" target="_blank" class="card_link" data-file="superchampions" data-title="Super Champions" data-devlog="https://twitter.com/comandogdev/status/1502917882493251586">
             <img src="images/superchampions.gif" class="bd-placeholder-img card-img-top" width="100%" style="min-height:225px;background:#fafafa;">
             </a>
         </div>
@@ -197,8 +197,8 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" id="btn_devlog">Devlog</button>
+        <button type="button" class="btn btn-success" id="btn_download">Download</button>
       </div>
     </div>
   </div>
@@ -209,6 +209,14 @@
 
 $('.card_link').click(function(){
     $('#exampleModalLabel').html( $(this).data('title') );
+    $('#btn_download').html( $(this).attr('href') );
+    
+    var devlog_url = $(this).data('devlog');
+    if( devlog_url ){
+        $('#btn_devlog').html( devlog_url ).show();
+    }else{
+        $('#btn_devlog').hide();
+    }
     
     $.ajax({
       method: 'GET',
