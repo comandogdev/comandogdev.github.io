@@ -35,12 +35,20 @@ $(function(){
       return false;
   });
   
-  
+ 
+  $('.video_link').click(function(){
+    $('#exampleModalLabel').html( $(this).data('title') );
+    video_open($(this).attr('href') );
+    $('#modal').modal('show');
+    return false;
+  });
   
 
   $('#modal').on('hidden.bs.modal', function (e) {
       $('#modal .modal-video').html('');
   });
+  
+  
 });
 
 
