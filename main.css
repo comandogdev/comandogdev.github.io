@@ -3,7 +3,7 @@ body{padding:20px;background:#222;color:white;}
 h1{margin-top:-15px;}
 a{color:orange;}
 table td, table th{color:white;}
-td{border-color:#6c757d;}
+td,th{border-color:#6c757d;}
 #modal{color:black;}
 .bd-placeholder-img{background:black url('/images/preloads_dark.gif?v=1') no-repeat center center;background-size:cover;min-height:225px;}
 .card_link{cursor:zoom-in;}
