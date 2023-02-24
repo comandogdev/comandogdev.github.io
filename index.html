@@ -237,8 +237,8 @@ $('.card_link').click(function(){
       dataType: 'html'
     }).done(function(data) {
       $('#modal .modal-body').html(data);
-      $('#modal .modal-body div').scrollTop(0);
       $('#modal').modal('show'); 
+      $('#modal .modal-body div').scrollTop(0);
     });
     return false;
 });
