@@ -23,12 +23,28 @@ $(function(){
         url: '/juegos/' + $(this).data('file') + '.html',
         dataType: 'html'
       }).done(function(data) {
-        $('#modal .modal-body').html(data);
+        $('#modal .modal-info').html(data).show();
+        $('#modal .modal-video').html('').hide();
         $('#modal').modal('show'); 
         setTimeout(function(){
-            $('#modal .modal-body div').scrollTop(0);
+            $('#modal .modal-info div').scrollTop(0);
         }, 200);
       });
       return false;
   });
+  
+  
+  
+
+  $('#modal').on('hidden.bs.modal', function (e) {
+      $('#modal-body').html('');
+  });
 });
+
+
+function video_open(url_youtube){
+  var id_youtube = url_youtube.replace('https://youtu.be/','');
+  var html = '<iframe allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/'+id_youtube+'?feature=oembed&amp;autoplay=1" style="width:100%;min-height:500px;" height="500"></iframe>';
+  $('#modal .modal-video').html(html).show();
+  $('#modal .modal-info').hide();
+}
