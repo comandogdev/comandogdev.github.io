@@ -216,11 +216,12 @@ Haz clic en un juego para averigar más detalles
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+          <div class="modal-info"></div>
+          <div class="modal-video"></div>
       </div>
       <div class="modal-footer">
         <a href="#" target="_blank" class="btn btn-secondary" id="btn_devlog">Devlog</a>
-        <a href="#" target="_blank" class="btn btn-secondary" id="btn_video">Vídeo</a>
+        <a href="#" target="_blank" class="btn btn-secondary" id="btn_video" onclick="return video_open($(this).attr('href'))">Vídeo</a>
         <a href="#" target="_blank" class="btn btn-primary" id="btn_download">Descargar</a>
       </div>
     </div>
@@ -228,7 +229,7 @@ Haz clic en un juego para averigar más detalles
 </div>
 
     
-<script src="general.js?v=2"></script>
+<script src="general.js?v=3"></script>
 
     
     
