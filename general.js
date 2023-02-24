@@ -14,8 +14,10 @@ $(function(){
       var video_url = $(this).data('video');
       if( video_url ){
           $('#btn_video').attr('href', video_url).show();
+          $('#btn_info').show();
       }else{
           $('#btn_video').hide();
+          $('#btn_info').hide();
       }
 
       $.ajax({
@@ -44,7 +46,7 @@ $(function(){
 
 function video_open(url_youtube){
   var id_youtube = url_youtube.replace('https://youtu.be/','');
-  var html = '<iframe allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/'+id_youtube+'?feature=oembed&amp;autoplay=1" style="width:100%;min-height:500px;" height="500"></iframe>';
+  var html = '<iframe allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/'+id_youtube+'?feature=oembed&amp;autoplay=1" style="width:100%;height:262px;" height="500"></iframe>';
   $('#modal .modal-video').html(html).show();
   $('#modal .modal-info').hide();
   return false;
