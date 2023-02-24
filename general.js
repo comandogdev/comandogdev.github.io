@@ -37,7 +37,7 @@ $(function(){
   
 
   $('#modal').on('hidden.bs.modal', function (e) {
-      $('#modal-body').html('');
+      $('#modal-video').html('');
   });
 });
 
