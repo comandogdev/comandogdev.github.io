@@ -27,7 +27,7 @@ $(function(){
         $('#modal').modal('show'); 
         setTimeout(function(){
             $('#modal .modal-body div').scrollTop(0);
-        }, 500);
+        }, 200);
       });
       return false;
   });
