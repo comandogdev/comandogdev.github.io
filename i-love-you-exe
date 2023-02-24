@@ -1,0 +1,34 @@
+<div style="width:100%;height:300px;overflow-y:scroll;">
+
+Juego de plataformas donde controlas a un virus informático y tu misión es infectar el sistema al 100%.
+
+<br><br>
+  
+<b>Características</b>
+<ul>
+  <li>1 jugador</li>
+</ul>
+
+<b>Tecnologías</b>
+<ul>
+  <li>Unity</li>
+</ul>
+
+<b>Plataformas</b>
+<ul>
+  <li>Windows</li>
+</ul>
+
+<b>Retos encontrados</b>
+<ul>
+  <li>Crear una moneda</li>
+  <li>Crear una tienda para comprar armas</li>
+  <li>Crear 3 armas con poderes distintos</li>
+  <li>Crear diferentes tipos de plataformas basados en la temática de informática</li>
+</ul>
+
+
+
+
+  
+</div>
