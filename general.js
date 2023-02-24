@@ -51,3 +51,8 @@ function video_open(url_youtube){
   $('#modal .modal-info').hide();
   return false;
 }
+
+function info_open(){
+  $('#modal .modal-info').show();
+  $('#modal .modal-video').hide();
+}
