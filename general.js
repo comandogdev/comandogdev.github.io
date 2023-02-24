@@ -39,7 +39,7 @@ $(function(){
   
 
   $('#modal').on('hidden.bs.modal', function (e) {
-      $('#modal-video').html('');
+      $('#modal .modal-video').html('');
   });
 });
 
@@ -54,5 +54,5 @@ function video_open(url_youtube){
 
 function info_open(){
   $('#modal .modal-info').show();
-  $('#modal .modal-video').hide();
+  $('#modal .modal-video').html('').hide();
 }
