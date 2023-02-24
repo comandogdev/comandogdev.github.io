@@ -236,7 +236,7 @@ $('.card_link').click(function(){
       url: '/juegos/' + $(this).data('file') + '.html',
       dataType: 'html'
     }).done(function(data) {
-      $('#modal .modal-body').html(data);
+      $('#modal .modal-body').html(data).scrollTop(0);
       $('#modal').modal('show'); 
     });
     return false;
