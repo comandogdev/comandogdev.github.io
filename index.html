@@ -238,7 +238,9 @@ $('.card_link').click(function(){
     }).done(function(data) {
       $('#modal .modal-body').html(data);
       $('#modal').modal('show'); 
-      $('#modal .modal-body div').scrollTop(0);
+      setTimeout(function(){
+          $('#modal .modal-body div').scrollTop(0);
+      }, 100);
     });
     return false;
 });
