@@ -49,6 +49,10 @@ $(function(){
   });
   
   
+  if( !isMobile() ){
+    $('.modal-dialog').addClass('modal-dialog-centered');
+  }
+  
 });
 
 
@@ -64,3 +68,8 @@ function info_open(){
   $('#modal .modal-info').show();
   $('#modal .modal-video').html('').hide();
 }
+
+function isMobile(){
+  return $(document).width() < 480;
+}
+
