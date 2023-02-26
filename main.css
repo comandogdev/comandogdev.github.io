@@ -11,6 +11,6 @@ td,th{border-color:#6c757d;}
 .card_link, .video_link{cursor:zoom-in;}
 iframe{background:black;}
 .card{overflow:hidden;}
-.menu{text-align:center;}
+.menu{text-align:center;margin-bottom:15px;}
 .menu a{margin-right:12px;}
 .menu:last-child {margin-right:0;}
